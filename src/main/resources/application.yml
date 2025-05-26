@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: load-balancer
+
+server:
+  port: 8080
+loadbalancer:
+  backends:
+    - localhost:8081
+    - localhost:8082
+  maxBufferSize: 8192
+  strategy: round-robin
